@@ -1,0 +1,113 @@
+/**
+ * SpirA Design Tokens · v1.0 (2026.07) · Light theme
+ * Spira Tokens.dc.html 컴포넌트 카탈로그에서 추출한 원본 토큰.
+ * 컬러/타이포/라운드/섀도우/스페이싱/그라데이션.
+ */
+:root {
+  /* ── Brand / Accent ───────────────────────────── */
+  --spira-lime:            #9DFE3B;  /* primary accent · CTA · active */
+  --spira-lime-strong:     #5FD93A;  /* floating action / pressed */
+  --spira-lime-grad-from:  #A6E86A;  /* momentum bar gradient start */
+  --spira-lime-grad-to:    #7FD94F;  /* momentum bar gradient end */
+  --spira-lime-ink:        #16211E;  /* text/icon ON lime */
+  --spira-ink-deep:        #002929;  /* logo · deep emphasis */
+  --spira-moss:            #44543C;  /* sparkle mark · soft icons */
+  --spira-violet:          #A78BFA;  /* pending marker dot */
+
+  /* ── Signal ───────────────────────────────────── */
+  --spira-danger:          #FF696C;  /* net loss · warning */
+  --spira-success:         #3EC55B;  /* connected status dot */
+
+  /* ── Surface ──────────────────────────────────── */
+  --spira-bg:              #F8F8F8;  /* page ground */
+  --spira-surface:         #FFFFFF;  /* card */
+  --spira-surface-lime:    #EEF7E4;  /* icon chip / soft tint */
+  --spira-surface-line:    #BCE89A;  /* task row outline / lime-soft */
+  --spira-surface-yellow:  #F6EFC2;  /* "매주" repeat tag */
+  --spira-surface-today:   #DDF4C4;  /* "오늘" tag */
+  --spira-surface-neutral: #F0F0EA;  /* neutral pill / avatar */
+  --spira-track:           #E7E7E7;  /* progress track */
+
+  /* ── Text ─────────────────────────────────────── */
+  --spira-text:            #16211E;  /* primary */
+  --spira-text-body:       #5B6560;  /* body / secondary */
+  --spira-text-muted:      #9AA39D;  /* muted / captions */
+  --spira-text-muted-warm: #8D9A8D;  /* eyebrow labels */
+  --spira-text-faint:      #B3BAB2;  /* micro captions */
+  --spira-text-today:      #3E7A2E;  /* on today tag */
+  --spira-text-weekly:     #96852F;  /* on weekly tag */
+
+  /* ── Border (translucent ink) ─────────────────── */
+  --spira-border-subtle:   rgba(0,41,41,0.05);
+  --spira-border:          rgba(0,41,41,0.08);
+  --spira-border-strong:   rgba(0,41,41,0.12);
+  --spira-border-stronger: rgba(0,41,41,0.16);
+
+  /* ── Typography ───────────────────────────────── */
+  --spira-font-sans: 'Pretendard','Hanken Grotesk',sans-serif;
+  --spira-font-mono: 'JetBrains Mono',monospace;
+
+  --spira-text-display: 40px;  /* greeting hero */
+  --spira-text-h1:      34px;  /* page title */
+  --spira-text-metric:  34px;  /* large metric */
+  --spira-text-h2:      24px;  /* section heading */
+  --spira-text-title:   22px;  /* card title */
+  --spira-text-lg:      20px;  /* metric row */
+  --spira-text-md:      16px;  /* card header */
+  --spira-text-base:    15px;  /* body */
+  --spira-text-sm:      14px;  /* dense body */
+  --spira-text-xs:      13px;  /* meta */
+  --spira-text-label:   12px;  /* tag / eyebrow */
+  --spira-text-cap:     11px;  /* mono caption */
+  --spira-text-micro:   10px;  /* micro label */
+
+  --spira-weight-medium:   500;
+  --spira-weight-semibold: 600;
+  --spira-weight-bold:     700;
+  --spira-weight-black:    800;
+
+  --spira-tracking-display: -0.02em;
+  --spira-tracking-heading: -0.01em;
+  --spira-tracking-eyebrow:  0.14em;  /* mono uppercase labels */
+  --spira-tracking-caps:     0.18em;  /* masthead eyebrow */
+  --spira-leading-tight:     1.05;
+  --spira-leading-body:      1.6;
+
+  /* ── Radius ───────────────────────────────────── */
+  --spira-radius-sm:   8px;
+  --spira-radius-md:   12px;   /* buttons */
+  --spira-radius-lg:   14px;   /* nav pill / icon chip */
+  --spira-radius-xl:   16px;   /* logo tile / swatch */
+  --spira-radius-2xl:  20px;   /* card */
+  --spira-radius-3xl:  22px;   /* wide card */
+  --spira-radius-4xl:  24px;   /* hero card */
+  --spira-radius-pill: 999px;
+  /* component-specific full-round containers */
+  --spira-radius-timer: 309px;  /* timer / music widget */
+  --spira-radius-task:  1445px; /* task list pill row */
+  --spira-radius-rail:  1672px; /* navigation rail */
+
+  /* ── Elevation ────────────────────────────────── */
+  --spira-shadow-sm:  0 4px 20px rgba(0,41,41,0.05);
+  --spira-shadow:     0 4px 24px rgba(0,41,41,0.05);
+  --spira-shadow-lg:  0 8px 32px rgba(0,41,41,0.07);
+  --spira-glow-lime:  0 6px 16px rgba(157,254,59,0.50);
+  --spira-glow-cta:   0 6px 18px rgba(157,254,59,0.45);
+  --spira-glow-fab:   0 8px 22px rgba(95,217,58,0.50);
+
+  /* ── Spacing scale (4px base) ─────────────────── */
+  --spira-space-1:  4px;
+  --spira-space-2:  8px;
+  --spira-space-3:  12px;
+  --spira-space-4:  16px;
+  --spira-space-5:  20px;
+  --spira-space-6:  24px;
+  --spira-space-7:  28px;
+  --spira-space-8:  32px;
+  --spira-space-10: 40px;
+  --spira-space-16: 64px;
+
+  /* ── Gradients ────────────────────────────────── */
+  --spira-grad-momentum: linear-gradient(90deg,#A6E86A,#7FD94F);
+  --spira-grad-avatar:   linear-gradient(135deg,#C9E8A8,#9DFE3B);
+}

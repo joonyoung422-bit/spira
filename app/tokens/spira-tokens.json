@@ -1,0 +1,124 @@
+{
+  "$meta": {
+    "name": "SpirA Design Tokens",
+    "version": "1.0",
+    "date": "2026.07",
+    "theme": "light",
+    "source": "Spira Tokens.dc.html"
+  },
+  "color": {
+    "brand": {
+      "lime": "#9DFE3B",
+      "lime-strong": "#5FD93A",
+      "lime-grad-from": "#A6E86A",
+      "lime-grad-to": "#7FD94F",
+      "lime-ink": "#16211E",
+      "ink-deep": "#002929",
+      "moss": "#44543C",
+      "violet": "#A78BFA"
+    },
+    "signal": {
+      "danger": "#FF696C",
+      "success": "#3EC55B"
+    },
+    "surface": {
+      "bg": "#F8F8F8",
+      "surface": "#FFFFFF",
+      "surface-lime": "#EEF7E4",
+      "surface-line": "#BCE89A",
+      "surface-yellow": "#F6EFC2",
+      "surface-today": "#DDF4C4",
+      "surface-neutral": "#F0F0EA",
+      "track": "#E7E7E7"
+    },
+    "text": {
+      "text": "#16211E",
+      "text-body": "#5B6560",
+      "text-muted": "#9AA39D",
+      "text-muted-warm": "#8D9A8D",
+      "text-faint": "#B3BAB2",
+      "text-today": "#3E7A2E",
+      "text-weekly": "#96852F"
+    },
+    "border": {
+      "border-subtle": "rgba(0,41,41,0.05)",
+      "border": "rgba(0,41,41,0.08)",
+      "border-strong": "rgba(0,41,41,0.12)",
+      "border-stronger": "rgba(0,41,41,0.16)"
+    }
+  },
+  "typography": {
+    "font": {
+      "sans": "'Pretendard','Hanken Grotesk',sans-serif",
+      "mono": "'JetBrains Mono',monospace"
+    },
+    "size": {
+      "display": "40px",
+      "h1": "34px",
+      "metric": "34px",
+      "h2": "24px",
+      "title": "22px",
+      "lg": "20px",
+      "md": "16px",
+      "base": "15px",
+      "sm": "14px",
+      "xs": "13px",
+      "label": "12px",
+      "cap": "11px",
+      "micro": "10px"
+    },
+    "weight": {
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "black": 800
+    },
+    "tracking": {
+      "display": "-0.02em",
+      "heading": "-0.01em",
+      "eyebrow": "0.14em",
+      "caps": "0.18em"
+    },
+    "leading": {
+      "tight": 1.05,
+      "body": 1.6
+    }
+  },
+  "radius": {
+    "sm": "8px",
+    "md": "12px",
+    "lg": "14px",
+    "xl": "16px",
+    "2xl": "20px",
+    "3xl": "22px",
+    "4xl": "24px",
+    "pill": "999px",
+    "timer": "309px",
+    "task": "1445px",
+    "rail": "1672px"
+  },
+  "elevation": {
+    "shadow-sm": "0 4px 20px rgba(0,41,41,0.05)",
+    "shadow": "0 4px 24px rgba(0,41,41,0.05)",
+    "shadow-lg": "0 8px 32px rgba(0,41,41,0.07)",
+    "glow-lime": "0 6px 16px rgba(157,254,59,0.50)",
+    "glow-cta": "0 6px 18px rgba(157,254,59,0.45)",
+    "glow-fab": "0 8px 22px rgba(95,217,58,0.50)"
+  },
+  "spacing": {
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "7": "28px",
+    "8": "32px",
+    "10": "40px",
+    "16": "64px"
+  },
+  "gradient": {
+    "momentum": "linear-gradient(90deg,#A6E86A,#7FD94F)",
+    "avatar": "linear-gradient(135deg,#C9E8A8,#9DFE3B)"
+  }
+}
