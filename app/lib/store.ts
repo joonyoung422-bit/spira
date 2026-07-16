@@ -87,7 +87,15 @@ export function load(): AppData {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type WorkspaceEntry = any;
 
-export function save(data: AppData): void {
+// 서버 동기화 훅 — SyncProvider가 로그인 후 등록한다. (디바운스는 pusher 쪽에서 처리)
+let serverPusher: ((d: AppData) => void) | null = null;
+export function setServerPusher(fn: ((d: AppData) => void) | null): void {
+  serverPusher = fn;
+}
+
+// localStorage 에만 기록 (서버로 되쏘지 않음) — 서버에서 받은 데이터를 로컬에 반영할 때 사용
+export function writeLocalRaw(data: AppData): void {
+  if (typeof window === 'undefined') return;
   try {
     localStorage.setItem(KEY, JSON.stringify(data));
   } catch {
@@ -106,6 +114,17 @@ export function save(data: AppData): void {
     }
     throw new Error('이미지가 너무 커서 저장에 실패했습니다. 이미지 없이 저장되었습니다.');
   }
+}
+
+export function save(data: AppData): void {
+  let err: unknown = null;
+  try {
+    writeLocalRaw(data);
+  } catch (e) {
+    err = e; // 로컬 저장 실패해도 서버 저장은 시도
+  }
+  serverPusher?.(data); // 로그인 상태면 서버에도 저장(디바운스)
+  if (err) throw err;
 }
 
 export function uid(): string {

@@ -1,15 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './tokens/spira-tokens.css';
-import Sidebar from './components/Sidebar';
-import AIChatButton from './components/AIChatButton';
-import MainShell from './components/MainShell';
-import MobileHeader from './components/MobileHeader';
+import AppFrame from './components/AppFrame';
 import { ChatProvider } from './lib/ChatContext';
 import { TimerProvider } from './lib/TimerContext';
 import { UIProvider } from './lib/UIContext';
 import AuthProvider from './components/AuthProvider';
-import AppContextBridge from './components/AppContextBridge';
+import SyncProvider from './components/SyncProvider';
 
 export const metadata: Metadata = {
   title: 'Spira',
@@ -24,17 +21,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-[#F8F8F8] text-neutral-900 antialiased font-sans">
         <AuthProvider>
+        <SyncProvider>
         <TimerProvider>
           <UIProvider>
           <ChatProvider>
-            <Sidebar />
-            <MobileHeader />
-            <MainShell>{children}</MainShell>
-            <AppContextBridge />
-            <AIChatButton />
+            <AppFrame>{children}</AppFrame>
           </ChatProvider>
           </UIProvider>
         </TimerProvider>
+        </SyncProvider>
         </AuthProvider>
       </body>
     </html>
